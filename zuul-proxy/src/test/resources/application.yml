@@ -1,0 +1,11 @@
+spring:
+ application:
+  name: zuul-proxy
+ jmx:
+  default-domain: zuul-proxy
+zuul:
+ routes:
+   webservice:
+    path: /students/**
+    url: http://localhost:8082/ws/students.wsdl
+name: Deb

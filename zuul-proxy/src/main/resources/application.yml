@@ -1,0 +1,14 @@
+spring:
+ application:
+  name: zuul-proxy
+ jmx:
+  default-domain: zuul-proxy
+zuul:
+ routes:
+   webservice:
+    path: /ws/**
+    url: http://localhost:8082/ws/students.wsdl
+
+server:
+ port: 8081
+
