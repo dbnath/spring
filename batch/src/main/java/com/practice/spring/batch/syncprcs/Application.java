@@ -1,13 +1,15 @@
 package com.practice.spring.batch.syncprcs;
 
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SyncPrcsApplication {
+@EnableBatchProcessing
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SyncPrcsApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
