@@ -2,8 +2,21 @@ spring:
   application:
     name: sync-prcs
   datasource:
-    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
-    driver-class-name: org.h2.Driver
-    username: sa
+    source-db:
+      url: jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1
+      driver-class-name: org.h2.Driver
+      username: sa
+      hikari:
+        connection-timeout: 30000
+        idle-timeout: 600000
+        max-lifetime: 1800000
+    dest-db:
+      url: jdbc:h2:mem:db2;DB_CLOSE_DELAY=-1
+      driver-class-name: org.h2.Driver
+      username: sa
+      hikari:
+        connection-timeout: 30000
+        idle-timeout: 600000
+        max-lifetime: 1800000
 
 

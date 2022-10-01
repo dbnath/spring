@@ -5,6 +5,9 @@ The following was discovered as part of building this project:
 
 # Getting Started
 
+For checking H2 database tables
+* [H2 console](http://localhost:8080/h2-console)
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
