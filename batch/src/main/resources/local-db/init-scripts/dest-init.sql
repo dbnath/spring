@@ -1,0 +1,1 @@
+create table IF NOT EXISTS Ingredient2(ingredient_id varchar(4) not null);

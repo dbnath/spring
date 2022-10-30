@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    source-db:
+      init-script: classpath:local-db/init-scripts/source-init.sql
+    dest-db:
+      init-script: classpath:local-db/init-scripts/dest-init.sql
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    generate-ddl: true
+

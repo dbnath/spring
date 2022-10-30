@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 
 @Configuration
-public class DatasourceConfig {
+public class DataSourceConfig {
 
     @Bean
     @ConfigurationProperties("spring.datasource.source-db")
@@ -26,7 +26,6 @@ public class DatasourceConfig {
     }
 
     @Bean("sourceDbDatasource")
-    @Primary
     @ConfigurationProperties("spring.datasource.source-db.hikari")
     public DataSource sourceDbDatasource(@Qualifier("dataSourcePropertiesSourceDb") DataSourceProperties dataSourceProperties) {
         return dataSourceProperties.initializeDataSourceBuilder()
@@ -34,6 +33,7 @@ public class DatasourceConfig {
     }
 
     @Bean("destDbDatasource")
+    @Primary
     @ConfigurationProperties("spring.datasource.dest-db.hikari")
     public DataSource destDbDatasource(@Qualifier("dataSourcePropertiesDestDb") DataSourceProperties dataSourceProperties) {
         return dataSourceProperties.initializeDataSourceBuilder()
