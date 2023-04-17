@@ -3,7 +3,7 @@ spring:
     name: sync-prcs
   datasource:
     source-db:
-      url: jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1
+      url: jdbc:h2:mem:source;DB_CLOSE_DELAY=-1
       driver-class-name: org.h2.Driver
       username: sa
       hikari:
@@ -11,12 +11,17 @@ spring:
         idle-timeout: 600000
         max-lifetime: 1800000
     dest-db:
-      url: jdbc:h2:mem:db2;DB_CLOSE_DELAY=-1
+      url: jdbc:h2:mem:dest;DB_CLOSE_DELAY=-1
       driver-class-name: org.h2.Driver
       username: sa
       hikari:
         connection-timeout: 30000
         idle-timeout: 600000
         max-lifetime: 1800000
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 
 

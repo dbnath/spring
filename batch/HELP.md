@@ -36,3 +36,8 @@ These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 * [Spring Batch Partition](https://medium.com/@akshay.patell1702/multithread-spring-batch-etl-2053003ace58)
+
+
+### Running the application
+
+* `gradle bootRun --args='--spring.profiles.active=local-db'`

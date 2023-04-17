@@ -38,7 +38,6 @@ public class DatabaseInitializer {
 
         ResourceDatabasePopulator populate = new ResourceDatabasePopulator();
         populate.addScript(initScript);
-        populate.setSeparator("//");
         initializer.setDatabasePopulator(populate);
 
         ResourceDatabasePopulator cleaner = new ResourceDatabasePopulator();
